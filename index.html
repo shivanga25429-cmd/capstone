@@ -48,12 +48,30 @@
             border-top-right-radius: 10px;
         }
         .content-heading{
-            color:rgb(66, 64, 64)
+            color:rgb(66, 64, 64);
+            margin-top: 100px;
+        }
+        .vertical-flex{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .button{
+            font-size: 18px; 
+            padding: 10px 50px;  
+            background-color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            transition: 
+            background-color 0.3s;
+            
         }
     </style>
 </head>
 <body style="margin:0;">
-    <div class="flex-container" style="color: white; background: linear-gradient(to bottom, #34227c, #5E3FE0); height: 60px; align-items: center; padding: 0px 20px 0px 20px; gap: 10px; margin-bottom:0;">
+    <div class="flex-container" style="color: white; background: linear-gradient(to bottom, #343435, #000000); height: 60px; align-items: center; padding: 0px 20px 0px 20px; gap: 10px; margin-bottom:0;">
         <div class="flex-container" style=" padding-right: 100px;">
             <img src="images/building.png" alt="building" class="icons" style="padding-bottom: 8px;">
             <h2> HOUSING<span style="font-size: 16px;">.COM</span></h2>
@@ -117,6 +135,15 @@
                 <img src="images/property/Modern Plan 2987 sqft 4 Beds 3.5 Baths.jpeg" alt="property" class="property-img">
                 <p> hello </p> 
             </div>
+        </div>
+        <h1 class="content-heading"> Have a property to sell?</h1>
+        <div class="property-box background-image vertical-flex" style="
+            height: 123px; 
+            width: 1235px; 
+            background-image: url('images/_ (1).jpeg');"> 
+            <p class="text" style="font-size: 24px; margin-bottom: 15px;">List your properties & connect with clients faster!</p>
+            <button class="button">Sell your property</button>
+        </div>
         </div>
     </div>
     
