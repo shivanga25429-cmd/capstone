@@ -21,8 +21,8 @@
         }
         .background-image {
             background-image: url('images/Businessman\ Digital\ Concept\ Communication\ Network.jpeg');
-            height:100vh;
-            background-size: cover;
+            height:400px;
+            background-size: 100% 100%;
             background-repeat: no-repeat;
             margin-top: 0;
         }
@@ -32,6 +32,23 @@
         }
         .box{
             background-color: white; border-radius: 60px; position: relative;
+        }
+        .property-box{
+            background-color: white;
+            border-radius: 10px; 
+            position: relative;
+            border:1px solid rgb(0, 0, 0);
+            margin-right: 16px;
+        }
+        .property-img{
+            height: 156px;
+            width: 294px; 
+            overflow: hidden; 
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px;
+        }
+        .content-heading{
+            color:rgb(66, 64, 64)
         }
     </style>
 </head>
@@ -81,7 +98,28 @@
             </div>
         </div>
     </div>
-    <h1>hello</h1>
+    <div style="margin-left: 150px; margin-right: 150px;">
+        <h1 class="content-heading"> Properties</h1>
+        <div class="flex-container" style="justify-content: start;">
+            <div class="property-box"> 
+                <img src="images/property/Color Harmony Palettes.jpeg" alt="property" class="property-img">
+                <p> hello </p> 
+            </div>
+            <div class="property-box"> 
+                <img src="images/property/Living Decor Pin.jpeg" alt="property" class="property-img">
+                <p> hello </p> 
+            </div>
+            <div class="property-box"> 
+                <img src="images/property/Stunning Luxury Homes.jpeg" alt="property" class="property-img">
+                <p> hello </p> 
+            </div>
+            <div class="property-box"> 
+                <img src="images/property/Modern Plan 2987 sqft 4 Beds 3.5 Baths.jpeg" alt="property" class="property-img">
+                <p> hello </p> 
+            </div>
+        </div>
+    </div>
+    
     
 </body>
 </html>
