@@ -5,11 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            color: white; 
+            background: linear-gradient(to bottom, #343435, #000000); 
+            height: 60px; 
+            align-items: center; 
+            padding: 0px 20px 0px 20px; 
+            gap: 10px; 
+            margin-bottom:0;
+            z-index: 1;
+        }
         .flex-container {
             display: flex;
             flex-direction: row;
             justify-content: right;
             align-items: center;
+            top: 0;
         }
         .top-links{
             gap:10px
@@ -34,18 +51,23 @@
             background-color: white; border-radius: 60px; position: relative;
         }
         .property-box{
-            background-color: white;
+            background: linear-gradient(to bottom, #f9f9fc, #000000);
             border-radius: 10px; 
             position: relative;
             border:1px solid rgb(0, 0, 0);
             margin-right: 16px;
+            overflow: hidden;
         }
         .property-img{
             height: 156px;
             width: 294px; 
-            overflow: hidden; 
             border-top-left-radius: 10px; 
             border-top-right-radius: 10px;
+            transition: transform 0.3s;
+            position: relative;
+        }
+        .property-img:hover{
+            transform: scale(1.07);
         }
         .content-heading{
             color:rgb(66, 64, 64);
@@ -61,12 +83,13 @@
             font-size: 18px; 
             padding: 10px 50px;  
             border: none; 
-            border-radius: 5px; 
+            border-radius: 10px; 
             cursor: pointer; 
-            transition: 
+            transition: transform 0.3s,
             background-color 0.3s;
             font-size: 20px; 
             padding: 15px;
+            width: 400px;
             
         }
         .nav-button {
@@ -133,10 +156,43 @@
             outline: none;
             box-shadow: none;
         }
+        .tool-box{
+            background: linear-gradient(to bottom, #656565, #000000);
+            border-radius: 10px; 
+            position: relative;
+            border:1px solid rgb(0, 0, 0);
+            margin-right: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            padding: 20px;
+            transition: box-shadow 0.3s ease;
+        }
+        .tool-img{
+            height: 48px;
+            width: 48px;
+            background: none;
+        }
+        .tool-text{
+            text-align: left;
+            color: white;
+        }
+        .tool-text-heading{
+            font-weight: bold;
+            font-size: 20px;
+            text-align: left;
+            color: white;
+        }
+        .tool-link{
+            color: rgb(0, 255, 251);
+            text-align: left;
+        }
+        .tool-box:hover {
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+        }
 </style>
 </head>
 <body style="margin:0;">
-    <div class="flex-container" style="color: white; background: linear-gradient(to bottom, #343435, #000000); height: 60px; align-items: center; padding: 0px 20px 0px 20px; gap: 10px; margin-bottom:0;">
+    <div class="header">
         <div class="flex-container" style=" padding-right: 100px;">
             <img src="images/building.png" alt="building" class="icons" style="padding-bottom: 8px;">
             <h2> HOUSING<span style="font-size: 16px;">.COM</span></h2>
@@ -167,13 +223,12 @@
             <button class="nav-button" >Download app </button>
             <div class="flex-container" >
                 <button class="nav-button" >Post Property</button>
-                <!-- <p style=" font-size: 12px; height:10px; background-color: red; padding: 3px 5px; line-height: 0.1;">FREE</p>            -->
                 <img src="images/free.png" alt="building" class="icons" style="height: 50px; padding-top: 2px;">
             </div>
         </div>
     </div>
     <div class="background-image text" >
-        <p style="padding-top: 100px;margin-bottom: 0; font-size: 45px;">Properties to buy in Sonipat</p>
+        <p style="padding-top: 100px;margin-bottom: 0; font-size: 45px; margin-top: 0;">Properties to buy in Sonipat</p>
         <p style="font-size: 20px; margin-top: 0;">Explore properties for sale, rent and lease</p>
         <div class="box" style="height: 65px; width: 600px; top: 100px; left: 450px;">
             <input type="text" placeholder="Search for locality, landmark, project or builder" class="input">
@@ -188,32 +243,62 @@
         <div class="flex-container" style="justify-content: start;">
             <div class="property-box"> 
                 <img src="images/property/Color Harmony Palettes.jpeg" alt="property" class="property-img">
-                <p> hello </p> 
+                <p class="text"> hello </p> 
             </div>
             <div class="property-box"> 
                 <img src="images/property/Living Decor Pin.jpeg" alt="property" class="property-img">
-                <p> hello </p> 
+                <p class="text"> hello </p> 
             </div>
             <div class="property-box"> 
                 <img src="images/property/Stunning Luxury Homes.jpeg" alt="property" class="property-img">
-                <p> hello </p> 
+                <p class="text"> hello </p> 
             </div>
             <div class="property-box"> 
                 <img src="images/property/Modern Plan 2987 sqft 4 Beds 3.5 Baths.jpeg" alt="property" class="property-img">
-                <p> hello </p> 
+                <p class="text"> hello </p> 
             </div>
         </div>
         <h1 class="content-heading"> Have a property to sell?</h1>
         <div class="property-box background-image vertical-flex" style="
-            height: 123px; 
+            height: 150px; 
             width: 1235px; 
             background-image: url('images/_ (1).jpeg');"> 
             <p class="text" style="font-size: 24px; margin-bottom: 15px;">List your properties & connect with clients faster!</p>
             <button class="button">Sell your property</button>
         </div>
+
+    </div>
+</div>
+    
+    <div style="margin-left: 150px; margin-right: 150px;">
+        <h1 class="content-heading"> Advice & Tools </h1>
+    </div>
+    <div class="flex-container" style="justify-content: start; margin-left: 150px; margin-right: 150px;">
+        <div class="tool-box"> 
+            <img src="images/icons/Calculator_app_icon_blue-removebg-preview.png" class="tool-img">
+            <p class="tool-text-heading"> EMI Calculator</p> 
+            <p class="tool-text">Know how much you'll have to pay<br>every month on your loan </p>
+            <p class="tool-link">VIEW NOW</p>
+        </div>
+        <div class="tool-box"> 
+            <img src="images/icons/___3_-removebg-preview.png" class="tool-img">
+            <p class="tool-text-heading"> Best Home loan offers</p> 
+            <p class="tool-text">Get the best bank offer curated just<br>for your profile</p>
+            <p class="tool-link">VIEW NOW</p>
+        </div>
+        <div class="tool-box"> 
+            <img src="images/icons/Download_HD_White_Hand_To_Hand_Money__Cash_Payment_Icon_PNG-removebg-preview.png" class="tool-img">
+            <p class="tool-text-heading"> Interiors Budget Estimator</p> 
+            <p class="tool-text">Know the cost of getting your<br>full/partial home interiors done</p>
+            <p class="tool-link">VIEW NOW</p> 
+        </div>
+        <div class="tool-box"> 
+            <img src="images/icons/Growth_Logo-removebg-preview.png" class="tool-img">
+            <p class="tool-text-heading"> Rate & Trends</p> 
+            <p class="tool-text">Know all about Property Rates &<br>trends in your city</p>
+            <p class="tool-link">VIEW NOW</p>
         </div>
     </div>
-    
     
 </body>
 </html>
